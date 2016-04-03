@@ -1,0 +1,89 @@
+
+<!-- saved from url=(0045)https://hauptj.com/m-html/demos/FizzBuzz.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Fizz Buzz</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      div#JS {
+        position: relative;
+        display: block; /* center JS output */
+        clear: both;
+      }
+      a:link {
+        background-color: hotpink;
+      }
+
+      a:visited {
+        background-color: hotpink;
+      }
+
+      a:hover {
+        background-color: cyan;
+      }
+
+      a:active {
+        background-color: hotpink;
+      }
+    </style>
+  <script>
+    function play(ID0, ID1) {
+      var Fizz = "Fizz";
+      var Buzz = "Buzz";
+      var FizzBuzz = "FizzBuzz";
+      var Error = "Error";
+      var Space = "&nbsp";
+      var Message = "I could have used else if statements instead of only using if statements and the ! operator. However, this still works :)";
+      var range = 101;
+      var text = "";
+      var i;
+
+      for (i = 1; i < range; i++) {
+        if (i % 3 == 0 && i % 5 == 0) { //both 3 and 5
+          text += FizzBuzz + Space;
+        }
+	if (i % 3 == 0 && !(i % 5 == 0)) { //only 3
+	  text += Fizz + Space;
+	}
+	if (!(i % 3 == 0) && i % 5 == 0) { //only 5
+	  text += Buzz + Space;
+        }
+	if (!(i % 3 == 0) && !(i % 5 == 0)) { //neither 3 or 5 print number
+          text += i + Space;
+	}	      
+		      
+      }
+
+      document.getElementById(ID0).innerHTML = text; //output results
+      document.getElementById(ID1).innerHTML = Message;		    
+    }
+		    
+  </script></head>
+  
+  <body>
+    <!-- Put the body of your page below this line -->
+    
+    <div id="intro">
+      <p>'Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".'</p>
+    </div>
+
+    <div id="JS">
+
+      <p id="FB">Lets start!</p>
+
+      <button type="button" onclick="play(&#39;FB&#39;,&#39;MEMO&#39;)">Play!</button>
+
+      <p id="MEMO"></p>
+
+    </div>
+
+    <div id="home">
+      <a href="https://hauptj.com/">hauptj.com</a>
+    </div>
+    <!-- Put the body of your page above this line -->
+  
+
+
+</body></html>
